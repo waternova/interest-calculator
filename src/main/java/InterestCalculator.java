@@ -1,15 +1,12 @@
-/*
-The simple interest formula allows us to calculate I, which is the interest earned or charged on a loan.
-According to this formula, the amount of interest is given by I = Prt, where P is the principal,
-r is the annual interest rate in decimal form, and t is the loan period expressed in years.
-*/
 public class InterestCalculator {
+
+    private static final String INPUT_NOT_PRESENT_ERROR = "One of the inputs is null - principal: %d, percent interest: %d, time: %d";
 
     public Integer calculate(Integer principal, Integer percentageInterest, Integer timeInYears) throws RequiredInputNotPresentException {
         if (requiredInputsPresent(principal, percentageInterest, timeInYears)) {
             return interestFor(principal, percentageInterest, timeInYears);
         }
-        throw new RequiredInputNotPresentException("Required input parameters not present.");
+        throw new RequiredInputNotPresentException(String.format(INPUT_NOT_PRESENT_ERROR, principal, percentageInterest, timeInYears));
     }
 
     private Integer interestFor(Integer principal, Integer percentageInterest, Integer timeInYears) {
