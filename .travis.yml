@@ -1,5 +1,5 @@
 language: java
 notifications:
   email:
-    - bjanakir@thoughtworks.com
+    - badri.j@thoughtworks.com
     - mjayaram@thoughtworks.com
