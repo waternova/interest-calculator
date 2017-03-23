@@ -16,17 +16,3 @@ To run the build (clean and test)
 ```
 ant clean test
 ```
-
-## Maven
-
-To run tests:
-
-```
-mvn test
-```
-
-To run the build (clean and build):
-
-```
-mvn clean install
-```
