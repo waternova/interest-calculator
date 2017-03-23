@@ -28,7 +28,7 @@ public class InterestCalculatorTest {
         Integer percentageInterest = 10;
         Integer timeInYears = 5;
 
-        assertThat(interestCalculator.calculate(principal, percentageInterest, timeInYears), is(80000));
+        assertThat(interestCalculator.calculate(principal, percentageInterest, timeInYears), is(50000));
     }
 
 
