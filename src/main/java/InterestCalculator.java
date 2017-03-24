@@ -10,7 +10,7 @@ public class InterestCalculator {
     }
 
     private double interestFor(Double principal, Double percentageInterest, Double timeInYears) {
-        return principal * Math.pow(1+(percentageInterest/100.0), timeInYears);
+        return (principal * percentageInterest * timeInYears) / 100;
     }
 
     private boolean requiredInputsPresent(Double principal, Double percentageInterest, Double timeInYears) {
