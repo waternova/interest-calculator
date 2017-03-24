@@ -16,4 +16,9 @@ public class InterestCalculator {
     private boolean requiredInputsPresent(Double principal, Double percentageInterest, Double timeInYears) {
         return principal != null && percentageInterest != null && timeInYears != null;
     }
+
+    public static void main(String[] args) throws RequiredInputNotPresentException {
+        final double interest = new InterestCalculator().calculate(100.0,10.0, 1.0);
+        System.out.println("Interest for $100 at 10% for 1 year: "  + interest);
+    }
 }
