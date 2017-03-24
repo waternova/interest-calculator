@@ -15,25 +15,25 @@ public class InterestCalculatorTest {
 
     @Test
     public void shouldReturnAValueForGivenInput() throws Exception {
-        Integer principal = 1;
-        Integer percentageInterest = 1;
-        Integer timeInYears = 1;
+        Double principal = 1.0;
+        Double percentageInterest = 1.0;
+        Double timeInYears = 1.0;
 
         assertThat(interestCalculator.calculate(principal, percentageInterest, timeInYears), not(nullValue()));
     }
 
     @Test
     public void shouldReturnInterestAccruedForRateOf10PercentFor5YearsOnAnAmountOf100000Dollars() throws Exception {
-        Integer principal = 100000;
-        Integer percentageInterest = 10;
-        Integer timeInYears = 5;
+        Double principal = 100000.0;
+        Double percentageInterest = 10.0;
+        Double timeInYears = 5.0;
 
-        assertThat(interestCalculator.calculate(principal, percentageInterest, timeInYears), is(50000));
+        assertThat(interestCalculator.calculate(principal, percentageInterest, timeInYears), is(50000.0));
     }
 
 
     @Test(expected = RequiredInputNotPresentException.class)
     public void shouldHandleNullInputs() throws Exception {
-        interestCalculator.calculate(1, 1, null);
+        interestCalculator.calculate(1.0, 1.0, null);
     }
 }
