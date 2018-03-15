@@ -1,3 +1,5 @@
+package ci;
+
 public class InterestCalculator {
 
     private static final String INPUT_NOT_PRESENT_ERROR = "One of the inputs is null - principal: %f, percent interest: %f, time: %f";
